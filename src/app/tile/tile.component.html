@@ -1,0 +1,5 @@
+<div (click)="reveal()" [ngClass]="{ 'revealed': tile.isRevealed, 'isMine': tile.isMine, 'withFlag': !tile.isRevealed && tile.showFlag }">
+    <ng-container *ngIf="tile.isRevealed">
+        {{ tile.isMine ? '*' : (tile.amountOfMinesAround ? tile.amountOfMinesAround : '') }}
+    </ng-container>
+</div>
